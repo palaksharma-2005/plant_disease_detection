@@ -1,7 +1,8 @@
 streamlit
-tensorflow==2.16.1
+tensorflow
 numpy
-pandas
+kagglehub
 Pillow
-opencv-python-headless
+opencv-python
 scikit-learn
+matplotlib

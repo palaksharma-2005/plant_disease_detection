@@ -10,9 +10,15 @@ st.set_page_config(
     page_icon="🌿"
 )
 
-model = tf.keras.models.load_model(
-    "plant_disease_model_new.h5",
-    compile=False
+@st.cache_resource
+def load_model():
+    model = tf.keras.models.load_model(
+        "plant_disease_model_new.h5",
+        compile=False
+    )
+    return model
+
+model = load_model()
 )
 
 with open("class_names.pkl", "rb") as f:
